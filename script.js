@@ -23,7 +23,7 @@ function addMessage(text, sender) {
 }
 
 async function obtenerRespuestaGPT(pregunta) {
-  // Mostrar mensaje "Escribiendo…" con animación
+  // Crear contenedor del mensaje "Escribiendo..."
   const escribiendoMsg = document.createElement("div");
   escribiendoMsg.classList.add("message", "bot");
 
@@ -46,10 +46,14 @@ async function obtenerRespuestaGPT(pregunta) {
 
     const data = await response.json();
 
-    // Reemplazar "escribiendo..." con la respuesta real
-    escribiendoMsg.textContent = data.respuesta;
+    // Eliminar el mensaje "Escribiendo..."
+    escribiendoMsg.remove();
+
+    // Mostrar la respuesta real del bot
+    addMessage(data.respuesta, "bot");
   } catch (error) {
-    escribiendoMsg.textContent = "Ocurrió un error al conectarse con ChatGPT.";
+    escribiendoMsg.remove();
+    addMessage("Ocurrió un error al conectarse con ChatGPT.", "bot");
   }
 }
 
