@@ -1,78 +1,92 @@
+/* styles.css */
+
+/* Estilos generales */
 body {
-  font-family: sans-serif;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f4f4f4, #eaeaea);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
 }
 
+/* Contenedor del chat */
 #chat-container {
   width: 400px;
-  height: 500px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  height: 600px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
+/* Área de mensajes */
 #messages {
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   overflow-y: auto;
+  background-color: #f9f9f9;
 }
 
+/* Estilos de los mensajes */
 .message {
-  margin: 5px 0;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
+/* Mensajes del usuario */
 .user {
-  text-align: right;
-  color: blue;
+  align-self: flex-end;
+  background-color: #d1e7dd;
+  color: #0f5132;
 }
 
+/* Mensajes del bot */
 .bot {
-  text-align: left;
-  color: green;
+  align-self: flex-start;
+  background-color: #e2e3e5;
+  color: #41464b;
 }
 
+/* Formulario de entrada */
 #input-form {
   display: flex;
   border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: #ffffff;
 }
 
+/* Campo de texto */
 #input {
   flex: 1;
   padding: 10px;
-  border: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
 }
 
+/* Botón de enviar */
 #send {
-  background: #007bff;
-  color: white;
+  background: #9c2349;
+  color: #ffffff;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
 }
 
-/* Animación del mensaje "Escribiendo..." */
-.typing {
-  display: inline-block;
-  position: relative;
-}
-
-.typing::after {
-  content: '';
-  display: inline-block;
-  width: 1em;
-  animation: dots 1.2s steps(3, end) infinite;
-  vertical-align: bottom;
-}
-
-@keyframes dots {
-  0%   { content: ''; }
-  33%  { content: '.'; }
-  66%  { content: '..'; }
-  100% { content: '...'; }
+#send:hover {
+  background: #7a1b38;
 }
