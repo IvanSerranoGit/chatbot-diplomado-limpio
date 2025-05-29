@@ -23,7 +23,7 @@ function addMessage(text, sender) {
 }
 
 async function obtenerRespuestaGPT(pregunta) {
-  // Crear contenedor del mensaje "Escribiendo..."
+  // Crear mensaje temporal "Escribiendo..."
   const escribiendoMsg = document.createElement("div");
   escribiendoMsg.classList.add("message", "bot");
 
@@ -46,10 +46,8 @@ async function obtenerRespuestaGPT(pregunta) {
 
     const data = await response.json();
 
-    // Eliminar el mensaje "Escribiendo..."
+    // Eliminar el mensaje temporal y agregar la respuesta real
     escribiendoMsg.remove();
-
-    // Mostrar la respuesta real del bot
     addMessage(data.respuesta, "bot");
   } catch (error) {
     escribiendoMsg.remove();
@@ -57,7 +55,7 @@ async function obtenerRespuestaGPT(pregunta) {
   }
 }
 
-// Mensaje de bienvenida automático
+// Mensaje de bienvenida al cargar
 window.addEventListener("DOMContentLoaded", () => {
   addMessage("Hola 👋 Soy el asistente del diplomado 'Salud, Seguridad Social y Derechos Humanos'. Puedes preguntarme lo que necesites sobre fechas, módulos, docentes o requisitos del programa.", "bot");
 });
