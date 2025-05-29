@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(cors({
-  origin: 'https://ivanserranogit.github.io/chatbot-diplomado-limpio/public/'
+  origin: 'https://ivanserranogit.github.io'
 }));
 app.use(express.json());
 
