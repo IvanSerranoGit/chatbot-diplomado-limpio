@@ -17,7 +17,19 @@ form.addEventListener("submit", async (e) => {
 function addMessage(text, sender) {
   const msg = document.createElement("div");
   msg.classList.add("message", sender);
-  msg.textContent = text;
+
+  const avatar = document.createElement("img");
+  avatar.classList.add("avatar");
+  avatar.src = sender === "bot"
+    ? "https://i.imgur.com/MT3q3Hr.png" // icono del bot
+    : "https://i.imgur.com/v0H5c3G.png"; // icono del usuario
+
+  const span = document.createElement("span");
+  span.textContent = text;
+
+  msg.appendChild(avatar);
+  msg.appendChild(span);
+
   messagesDiv.appendChild(msg);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
