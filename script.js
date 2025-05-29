@@ -23,9 +23,10 @@ function addMessage(text, sender) {
 }
 
 async function obtenerRespuestaGPT(pregunta) {
-  // Crear contenedor del mensaje "Escribiendo..."
+  // Crear el contenedor temporal con ID único
   const escribiendoMsg = document.createElement("div");
   escribiendoMsg.classList.add("message", "bot");
+  escribiendoMsg.id = "typing";
 
   const span = document.createElement("span");
   span.textContent = "Escribiendo";
@@ -46,10 +47,9 @@ async function obtenerRespuestaGPT(pregunta) {
 
     const data = await response.json();
 
-    // Eliminar el mensaje temporal
-    if (escribiendoMsg && escribiendoMsg.parentNode) {
-      escribiendoMsg.parentNode.removeChild(escribiendoMsg);
-    }
+    // Eliminar el contenedor de "escribiendo..." por ID
+    const typingElement = document.getElementById("typing");
+    if (typingElement) typingElement.remove();
 
     // Mostrar la respuesta real si existe
     if (data.respuesta && data.respuesta.trim() !== "") {
@@ -59,9 +59,9 @@ async function obtenerRespuestaGPT(pregunta) {
     }
 
   } catch (error) {
-    if (escribiendoMsg && escribiendoMsg.parentNode) {
-      escribiendoMsg.parentNode.removeChild(escribiendoMsg);
-    }
+    const typingElement = document.getElementById("typing");
+    if (typingElement) typingElement.remove();
+
     addMessage("Ocurrió un error al conectarse con ChatGPT.", "bot");
   }
 }
