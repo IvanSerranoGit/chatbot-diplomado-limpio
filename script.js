@@ -21,8 +21,8 @@ function addMessage(text, sender) {
   const avatar = document.createElement("img");
   avatar.classList.add("avatar");
   avatar.src = sender === "bot"
-    ? "https://i.imgur.com/MT3q3Hr.png" // icono del bot
-    : "https://i.imgur.com/v0H5c3G.png"; // icono del usuario
+    ? "assets/bot.png"  // avatar del bot
+    : "assets/user.png"; // avatar del usuario
 
   const span = document.createElement("span");
   span.textContent = text;
@@ -35,15 +35,19 @@ function addMessage(text, sender) {
 }
 
 async function obtenerRespuestaGPT(pregunta) {
-  // Crear el contenedor temporal con ID único
   const escribiendoMsg = document.createElement("div");
   escribiendoMsg.classList.add("message", "bot");
   escribiendoMsg.id = "typing";
+
+  const avatar = document.createElement("img");
+  avatar.classList.add("avatar");
+  avatar.src = "https://i.imgur.com/MT3q3Hr.png";
 
   const span = document.createElement("span");
   span.textContent = "Escribiendo";
   span.classList.add("typing");
 
+  escribiendoMsg.appendChild(avatar);
   escribiendoMsg.appendChild(span);
   messagesDiv.appendChild(escribiendoMsg);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -58,18 +62,14 @@ async function obtenerRespuestaGPT(pregunta) {
     });
 
     const data = await response.json();
-
-    // Eliminar el contenedor de "escribiendo..." por ID
     const typingElement = document.getElementById("typing");
     if (typingElement) typingElement.remove();
 
-    // Mostrar la respuesta real si existe
     if (data.respuesta && data.respuesta.trim() !== "") {
       addMessage(data.respuesta, "bot");
     } else {
       addMessage("No recibí respuesta del servidor.", "bot");
     }
-
   } catch (error) {
     const typingElement = document.getElementById("typing");
     if (typingElement) typingElement.remove();
