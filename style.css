@@ -116,3 +116,6 @@ body {
   66%  { content: '..'; }
   100% { content: '...'; }
 }
+.message:empty {
+  display: none !important;
+}

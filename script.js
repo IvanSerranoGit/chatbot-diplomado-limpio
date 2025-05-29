@@ -2,6 +2,8 @@ const messagesDiv = document.getElementById("messages");
 const form = document.getElementById("input-form");
 const input = document.getElementById("input");
 
+let typingElement = null; // Referencia global para el contenedor de "Escribiendo..."
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const userMessage = input.value.trim();
@@ -10,8 +12,7 @@ form.addEventListener("submit", async (e) => {
   addMessage(userMessage, "user");
   input.value = "";
 
-  const respuesta = await obtenerRespuestaGPT(userMessage);
-  addMessage(respuesta, "bot");
+  await obtenerRespuestaGPT(userMessage);
 });
 
 function addMessage(text, sender) {
@@ -21,8 +22,8 @@ function addMessage(text, sender) {
   const avatar = document.createElement("img");
   avatar.classList.add("avatar");
   avatar.src = sender === "bot"
-    ? "assets/bot.png"  // avatar del bot
-    : "assets/user.png"; // avatar del usuario
+    ? "assets/bot.png"
+    : "assets/user.png";
 
   const span = document.createElement("span");
   span.textContent = text;
@@ -35,21 +36,27 @@ function addMessage(text, sender) {
 }
 
 async function obtenerRespuestaGPT(pregunta) {
-  const escribiendoMsg = document.createElement("div");
-  escribiendoMsg.classList.add("message", "bot");
-  escribiendoMsg.id = "typing";
+  // Eliminar anterior "escribiendo..." si quedó
+  if (typingElement && typingElement.parentNode) {
+    typingElement.remove();
+    typingElement = null;
+  }
+
+  // Crear mensaje "Escribiendo..."
+  typingElement = document.createElement("div");
+  typingElement.classList.add("message", "bot");
 
   const avatar = document.createElement("img");
   avatar.classList.add("avatar");
-  avatar.src = "https://i.imgur.com/MT3q3Hr.png";
+  avatar.src = "assets/bot.png";
 
   const span = document.createElement("span");
   span.textContent = "Escribiendo";
   span.classList.add("typing");
 
-  escribiendoMsg.appendChild(avatar);
-  escribiendoMsg.appendChild(span);
-  messagesDiv.appendChild(escribiendoMsg);
+  typingElement.appendChild(avatar);
+  typingElement.appendChild(span);
+  messagesDiv.appendChild(typingElement);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
   try {
@@ -62,23 +69,40 @@ async function obtenerRespuestaGPT(pregunta) {
     });
 
     const data = await response.json();
-    const typingElement = document.getElementById("typing");
-    if (typingElement) typingElement.remove();
+
+    // 🔥 Verificación extra: si quedó vacío, se elimina
+    if (
+      typingElement &&
+      typingElement.parentNode &&
+      typingElement.textContent.trim() === ""
+    ) {
+      typingElement.remove();
+      typingElement = null;
+    }
+
+    // 🔥 Eliminación estándar
+    if (typingElement && typingElement.parentNode) {
+      typingElement.remove();
+      typingElement = null;
+    }
 
     if (data.respuesta && data.respuesta.trim() !== "") {
       addMessage(data.respuesta, "bot");
     } else {
       addMessage("No recibí respuesta del servidor.", "bot");
     }
+
   } catch (error) {
-    const typingElement = document.getElementById("typing");
-    if (typingElement) typingElement.remove();
+    if (typingElement && typingElement.parentNode) {
+      typingElement.remove();
+      typingElement = null;
+    }
 
     addMessage("Ocurrió un error al conectarse con ChatGPT.", "bot");
   }
 }
 
-// Mensaje de bienvenida al cargar
+// Mensaje de bienvenida al cargar la página
 window.addEventListener("DOMContentLoaded", () => {
-  addMessage("Hola 👋 Soy el asistente del diplomado 'Salud, Seguridad Social y Derechos Humanos'. Puedes preguntarme lo que necesites sobre fechas, módulos, docentes o requisitos del programa.", "bot");
+  addMessage("Hola 👋 Soy el asistente del diplomado 'Salud, Seguridad Social y Derechos Humanos'. Pregúntame sobre fechas, módulos, docentes o requisitos del programa.", "bot");
 });
