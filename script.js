@@ -106,3 +106,15 @@ async function obtenerRespuestaGPT(pregunta) {
 window.addEventListener("DOMContentLoaded", () => {
   addMessage("Hola 👋 Soy el asistente del diplomado 'Salud, Seguridad Social y Derechos Humanos'. Pregúntame sobre fechas, módulos, docentes o requisitos del programa.", "bot");
 });
+
+// Mostrar/ocultar chat al hacer clic en el botón flotante
+const chatButton = document.getElementById("chat-button");
+const chatContainer = document.getElementById("chat-container");
+
+chatButton.addEventListener("click", () => {
+  if (chatContainer.style.display === "none") {
+    chatContainer.style.display = "flex";
+  } else {
+    chatContainer.style.display = "none";
+  }
+});
