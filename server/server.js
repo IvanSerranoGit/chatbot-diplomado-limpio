@@ -4,7 +4,9 @@ const fetch = require('node-fetch'); // Usa node-fetch@2
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://ivanserranogit.github.io/chatbot-diplomado-limpio/public/'
+}));
 app.use(express.json());
 
 app.post('/chat', async (req, res) => {
