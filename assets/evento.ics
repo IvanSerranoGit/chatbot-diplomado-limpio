@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Liderazgos ISSSTE//Calendario de Eventos//ES
+BEGIN:VEVENT
+UID:evento-20250603@liderazgos.issste
+SUMMARY:Salud, Seguridad Social y Derechos Humanos para un Estado de Bienestar
+DTSTART:20250603T160000Z
+DTEND:20250603T190000Z
+LOCATION:Sala de Juntas de la Dirección General del ISSSTE, ubicada en Av. San Fernando 547, Tlalpan, CDMX.
+DESCRIPTION:Evento organizado por Liderazgos ISSSTE
+END:VEVENT
+END:VCALENDAR
