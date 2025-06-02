@@ -129,13 +129,14 @@ chatButton.addEventListener("click", () => {
   }
 });
 
-
-
+window.addEventListener("DOMContentLoaded", () => {
+  // tu código aquí
 // Carrusel interactividad
 const slides = document.getElementById("slides");
 const dots = document.querySelectorAll(".dot");
 const slideImages = slides.querySelectorAll("img");
 const totalSlides = slideImages.length;
+// slides.style.width = `${totalSlides * 100}%`;
 let index = 0;
 
 function updateSlide(position) {
@@ -156,6 +157,7 @@ function prevSlide() {
   updateSlide(index);
 }
 
+
 if (document.getElementById("next") && document.getElementById("prev")) {
   document.getElementById("next").addEventListener("click", nextSlide);
   document.getElementById("prev").addEventListener("click", prevSlide);
@@ -168,6 +170,10 @@ if (document.getElementById("next") && document.getElementById("prev")) {
   setInterval(nextSlide, 5000);
   updateSlide(index);
 }
+
+});
+
+
 // Popup modal
 const openBtn = document.getElementById("open-popup");
 const closeBtn = document.getElementById("close-popup");
@@ -181,3 +187,4 @@ openBtn?.addEventListener("click", () => {
 closeBtn?.addEventListener("click", () => {
   popup.classList.add("hidden");
 });
+

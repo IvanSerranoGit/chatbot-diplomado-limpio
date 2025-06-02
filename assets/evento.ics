@@ -3,7 +3,9 @@ VERSION:2.0
 PRODID:-//Liderazgos ISSSTE//Calendario de Eventos//ES
 BEGIN:VEVENT
 UID:evento-20250603@liderazgos.issste
-SUMMARY:Salud, Seguridad Social y Derechos Humanos para un Estado de Bienestar
+SUMMARY:El negocio de la enfermedad,
+medicamentos y patentes en el
+neoliberalismo
 DTSTART:20250603T160000Z
 DTEND:20250603T190000Z
 LOCATION:Sala de Juntas de la Dirección General del ISSSTE, ubicada en Av. San Fernando 547, Tlalpan, CDMX.

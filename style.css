@@ -10,9 +10,12 @@ body {
   background-color: #9c2349;
 }
 .slider-container{
-  width: 80%;
+  width: 85%;
   display: flex;
   margin: 0 auto;
+  top: 20px;
+    height: 420px; /* Ajusta al gusto */
+
 }
 /* .slider{
   width: 70%;
@@ -21,6 +24,18 @@ body {
 } */
 
 /* Chat flotante */
+
+.categorias {
+  /* background-color: #9c2349; */
+  border-radius: 20px;
+  height: 170px;
+}
+.ico-categorias{
+  width: 90px;
+}
+.txt-categorias{
+  font-size: 20px;
+}
 #chat-button {
   position: fixed;
   bottom: 20px;
@@ -117,6 +132,13 @@ body {
 .animate-slide {
   animation: slide 20s infinite;
 }
+.pleca{
+  width: 100%;
+  background-color: #9c2349;
+}
+.pleca-amarilla{
+  background-color: #ecd799;
+}
 footer{
   background-color: #9c2349;
 }
@@ -127,5 +149,16 @@ footer{
   width: 80%;
   display: flex;
   top: 35px;
+}
+}
+/* Opcional si no usas Tailwind para esto */
+@media (max-width: 768px) {
+  #slider button {
+    font-size: 1rem;
+    padding: 4px 8px;
+  }
+  .slider-container{
+  width: 90%;
+  height: 120px; /* Ajusta al gusto */
 }
 }
