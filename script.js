@@ -1,3 +1,11 @@
+  // Menú responsive hamburguesa
+const toggleButton = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggleButton?.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
 const messagesDiv = document.getElementById("messages");
 const form = document.getElementById("input-form");
 const input = document.getElementById("input");
@@ -41,6 +49,8 @@ async function obtenerRespuestaGPT(pregunta) {
     typingElement.remove();
     typingElement = null;
   }
+
+
 
   // Crear mensaje "Escribiendo..."
   typingElement = document.createElement("div");
@@ -117,4 +127,57 @@ chatButton.addEventListener("click", () => {
   } else {
     chatContainer.style.display = "none";
   }
+});
+
+
+
+// Carrusel interactividad
+const slides = document.getElementById("slides");
+const dots = document.querySelectorAll(".dot");
+const slideImages = slides.querySelectorAll("img");
+const totalSlides = slideImages.length;
+let index = 0;
+
+function updateSlide(position) {
+  slides.style.transform = `translateX(-${position * 100}%)`;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("bg-white", i !== position);
+    dot.classList.toggle("bg-pink-700", i === position);
+  });
+}
+
+function nextSlide() {
+  index = (index + 1) % totalSlides;
+  updateSlide(index);
+}
+
+function prevSlide() {
+  index = (index - 1 + totalSlides) % totalSlides;
+  updateSlide(index);
+}
+
+if (document.getElementById("next") && document.getElementById("prev")) {
+  document.getElementById("next").addEventListener("click", nextSlide);
+  document.getElementById("prev").addEventListener("click", prevSlide);
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      updateSlide(index);
+    });
+  });
+  setInterval(nextSlide, 5000);
+  updateSlide(index);
+}
+// Popup modal
+const openBtn = document.getElementById("open-popup");
+const closeBtn = document.getElementById("close-popup");
+const popup = document.getElementById("popup-modal");
+
+openBtn?.addEventListener("click", () => {
+  popup.classList.remove("hidden");
+  popup.classList.add("flex");
+});
+
+closeBtn?.addEventListener("click", () => {
+  popup.classList.add("hidden");
 });
