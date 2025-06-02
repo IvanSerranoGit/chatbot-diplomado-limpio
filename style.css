@@ -120,3 +120,12 @@ body {
 footer{
   background-color: #9c2349;
 }
+
+/* Aplica solo en pantallas menores a 640px */
+@media (max-width: 639px) {
+ .slider-container{
+  width: 80%;
+  display: flex;
+  top: 35px;
+}
+}
