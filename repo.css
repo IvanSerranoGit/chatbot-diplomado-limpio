@@ -1,0 +1,12 @@
+/* styles.css - Estilos personalizados para el repositorio del museo digital */
+
+/* Ocultar scrollbars para carrusel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Puedes agregar más estilos personalizados aquí si es necesario */

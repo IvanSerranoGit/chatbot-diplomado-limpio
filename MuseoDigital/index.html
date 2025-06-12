@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museo Virtual</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-black">
+  <!-- Contenedor de la sala -->
+  <div id="museo" class="relative w-screen h-screen overflow-hidden">
+    <!-- Render de una pared (puedes duplicar este bloque para más paredes) -->
+    <img id="pared" src="assets/renders/sala1.jpg" alt="Pared del museo" class="w-full h-full object-cover" />
+
+    <!-- Hotspots interactivos -->
+    <!-- <button class="absolute top-1/3 left-1/4 w-6 h-6 bg-red-500 rounded-full" onclick="mostrarPopup('Contenido del popup 1')"></button> -->
+    <!-- <button class="absolute bottom-1/3 right-1/4 w-6 h-6 bg-blue-500 rounded-full" onclick="mostrarPopup('Contenido del popup 2')"></button> -->
+
+    <!-- Barra de herramientas -->
+    <div class="barra-herramientas absolute bottom-0 w-full bg-gray-800 bg-opacity-90 text-white flex items-center justify-between px-4 py-2 space-x-2 text-xl">
+      <!-- Grupo izquierda -->
+      <div class="flex items-center space-x-2">
+        <button title="Slide anterior" onclick="slideAnterior()">⏪</button>
+        <button title="Ver thumbnails">🔲</button>
+      </div>
+
+      <!-- Controles de movimiento -->
+      <div class="flex items-center space-x-2">
+        <button title="Izquierda">⬅️</button>
+        <button title="Derecha">➡️</button>
+        <button title="Arriba">⬆️</button>
+        <button title="Abajo">⬇️</button>
+        <button title="Zoom in" onclick="zoomIn()">➕</button>
+        <button title="Zoom out" onclick="zoomOut()">➖</button>
+        <button title="Modo VR">🥽</button>
+      </div>
+
+      <!-- Grupo derecha -->
+      <div class="flex items-center space-x-2">
+        <button title="Pantalla completa" onclick="toggleFullscreen()">⛶</button>
+        <button title="Minimizar barra" onclick="toggleBarra()">⬇️</button>
+        <button title="Slide siguiente" onclick="slideSiguiente()">⏩</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <div class="bg-pink-700 rounded-lg p-4 max-w-md w-full relative">
+      <button onclick="cerrarPopup()" class="absolute top-2 right-2 text-black">✖</button>
+      <div id="popup-content" class="text-black">Contenido del popup</div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Museo Virtual</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class=bg-black overflow-hidden m-0 p-0">
+  <!-- Contenedor de la sala -->
+  <div id="museo" class="relative w-full h-screen overflow-hidden flex items-center justify-center">
+     <!-- Contenedor de la imagen -->
+    <div id="contenedor-pared" class="relative w-full h-full">
+      <img id="pared" src="" alt="Sala actual" class="w-full h-full object-contain mx-auto" />
+    </div>
+
+    <!-- Hotspots interactivos -->
+    <!-- <button class="absolute top-1/3 left-1/4 w-6 h-6 bg-red-500 rounded-full" onclick="mostrarPopup('Contenido del popup 1')"></button> -->
+    <!-- <button class="absolute bottom-1/3 right-1/4 w-6 h-6 bg-blue-500 rounded-full" onclick="mostrarPopup('Contenido del popup 2')"></button> -->
+
+    <!-- Barra de herramientas -->
+    <div class="barra-herramientas absolute bottom-0 w-full bg-gray-800 bg-opacity-90 text-white flex items-center justify-between px-4 py-2 space-x-2 text-xl">
+      <!-- Grupo izquierda -->
+      <div class="flex items-center space-x-2">
+        <button title="Slide anterior" onclick="slideAnterior()"><i class="fa-solid fa-circle-left"></i></button>
+        <button title="Ver thumbnails"><i class="fa-solid fa-panorama"></i></button>
+      </div>
+
+      <!-- Controles de movimiento -->
+      <div class="flex items-center space-x-2">
+        <!-- <button title="Izquierda"></button> -->
+        <!-- <button title="Derecha"></button> -->
+        <!-- <button title="Arriba">⬆️</button> -->
+        <!-- <button title="Abajo">⬇️</button> -->
+        <button title="Zoom in" onclick="zoomIn()"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+        <button title="Zoom out" onclick="zoomOut()"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <!-- <button title="Modo VR">🥽</button> -->
+      </div>
+
+      <!-- Grupo derecha -->
+      <div class="flex items-center space-x-2">
+        <button title="Pantalla completa" onclick="toggleFullscreen()">⛶</button>
+        <!-- <button title="Minimizar barra" onclick="toggleBarra()">⬇️</button> -->
+        <button title="Slide siguiente" onclick="slideSiguiente()"><i class="fa-solid fa-circle-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg p-6 max-w-5xl  w-full relative">
+      <button onclick="cerrarPopup()" class="absolute top-2 right-2 text-black">✖</button>
+      <div id="popup-content" class="text-black">Contenido del popup</div>
+    </div>
+  </div>
+
+  <!-- Alerta de orientación para móviles -->
+<div id="orientacion-alerta" class="fixed inset-0 bg-black bg-opacity-80 text-white flex flex-col items-center justify-center z-[9999] text-center p-6 hidden">
+  <p class="text-xl font-bold mb-4">🔄 Gira tu teléfono</p>
+  <p>Para una mejor experiencia en el museo digital, por favor usa tu dispositivo en modo horizontal.</p>
+</div>
+
+  <script src="js/app.js">
+    
+  </script>
+</body>
+</html>
