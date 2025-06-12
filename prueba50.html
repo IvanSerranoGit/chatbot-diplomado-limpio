@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liderazgos ISSSTE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- 1. Menú superior -->
+    <header class="bg-white shadow p-4 flex justify-between items-center flex-wrap max-w-7xl mx-auto">
+        <img src="assets/logo.png" alt="Logo" class="h-16" />
+        <nav class="relative">
+            <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <ul id="menu"
+                class="text-lg absolute right-0 mt-2 bg-white rounded shadow-md text-sm hidden z-50 md:flex md:static md:bg-transparent md:shadow-none md:flex-row md:space-x-4">
+                <li><a href="./praxis/index.html" target="_blank" class="block px-4 py-2 hover:text-pink-700">Congreso
+                        Praxis</a></li>
+                <li><a href="diplomado.html" class="block px-4 py-2 hover:text-pink-700">Cursos</a></li>
+                <li><a href="#categorias" class="block px-4 py-2 hover:text-pink-700">Webinarios</a></li>
+                <li><a href="diplomado.html" class="block px-4 py-2 hover:text-pink-700">Formación</a></li>
+                <li><a href="memoria.html" class="block px-4 py-2 hover:text-pink-700">Identidad e Historia</a></li>
+                <li><a href="#noticias" class="block px-4 py-2 hover:text-pink-700">Espacio de Saberes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="p-2 flex justify-between items-center flex-wrap max-w-7xl mx-auto pleca"></div>
+    <div class="shadow p-1 flex justify-between items-center flex-wrap max-w-7xl mx-auto pleca-amarilla"></div>
+
+
+    <!-- 50% -->
+
+    <section class="mt-24 md:mt-0 bg-gray-200 py-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 px-4 items-stretch">
+
+            <!-- SLIDER -->
+            <div class="h-[60vh]">
+                <div id="slider" class="relative w-full h-full overflow-hidden rounded-xl shadow-md bg-white">
+                    <div id="slides" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+                        <a href="./praxis/index.html" class="w-full h-full block flex-shrink-0">
+                            <img src="assets/slider-liderazgos-1.jpg" class="w-full h-full object-cover rounded-xl"
+                                alt="Banner 1" />
+                        </a>
+                        <a href="https://teams.microsoft.com/..." target="_blank"
+                            class="w-full h-full block flex-shrink-0">
+                            <img src="assets/slider-liderazgos-2.jpg" class="w-full h-full object-cover rounded-xl"
+                                alt="Banner 2" />
+                        </a>
+                        <a href="diplomado.html" class="w-full h-full block flex-shrink-0">
+                            <img src="assets/slider-liderazgos-3.jpg" class="w-full h-full object-cover rounded-xl"
+                                alt="Banner 3" />
+                        </a>
+                    </div>
+
+                    <!-- Botones -->
+                    <button id="prev"
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1">&#10094;</button>
+                    <button id="next"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 text-white px-3 py-1">&#10095;</button>
+
+                    <!-- Puntos -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2" id="dots">
+                        <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer"></span>
+                        <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer"></span>
+                        <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍAS -->
+            <div class="flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Explora por Categoría</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <a href="./praxis/index.html" target="_blank"
+                        class="block bg-pink-800 hover:bg-pink-900 p-4 rounded shadow flex flex-col items-center justify-center text-center transition h-32">
+                        <img src="assets/cat1.png" class="w-14 h-10 mb-2" alt="Praxis">
+                        <p class="text-white font-semibold text-sm"> Congreso Praxis</p>
+                    </a>
+                    <a href="#"
+                        class="block bg-pink-800 hover:bg-pink-900 p-4 rounded shadow flex flex-col items-center justify-center text-center transition h-32">
+                        <img src="assets/cat2.png" class="w-14 h-10 mb-2" alt="Cursos">
+                        <p class="text-white font-semibold text-sm">Cursos</p>
+                    </a>
+                    <a href="#"
+                        class="block bg-pink-800 hover:bg-pink-900 p-4 rounded shadow flex flex-col items-center justify-center text-center transition h-32">
+                        <img src="assets/cat3.png" class="w-14 h-10 mb-2" alt="Webinars">
+                        <p class="text-white font-semibold text-sm">Webinarios</p>
+                    </a>
+                    <a href="diplomado.html"
+                        class="block bg-pink-800 hover:bg-pink-900 p-4 rounded shadow flex flex-col items-center justify-center text-center transition h-32">
+                        <img src="assets/cat4.png" class="w-14 h-10 mb-2" alt="Diplomado">
+                        <p class="text-white font-semibold text-sm">Formación</p>
+                    </a>
+                    <a href="memoria.html"
+                        class="block bg-pink-800 hover:bg-pink-900 p-4 rounded shadow flex flex-col items-center justify-center text-center transition h-32">
+                        <img src="assets/cat5.png" class="w-14 h-10 mb-2" alt="Memoria">
+                        <p class="text-white font-semibold text-sm">Identidad e historia</p>
+                    </a>
+                    <a href="#"
+                        class="block bg-pink-800 hover:bg-pink-900 p-4 rounded shadow flex flex-col items-center justify-center text-center transition h-32">
+                        <img src="assets/cat6.png" class="w-14 h-10 mb-2" alt="Editorial">
+                        <p class="text-white font-semibold text-sm">Espacio de Saberes</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Eventos -->
+    <section id="eventos" class="py-10 px-4 bg-gray-50 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold mb-10 text-center">Siguientes eventos</h2>
+        <div class="grid gap-6 md:grid-cols-4">
+            <div class="bg-white rounded shadow p-4">
+                <img src="assets/destruccion.avif" alt="" class="mb-2">
+                <h3 class="font-semibold text-lg mb-2">La destrucción de la prevención y la promoción de la salud</h3>
+                <h4>Dra. Juana E. Suárez Conejero
+                    Sesión presencial
+                </h4>
+                <p class="text-sm text-gray-600">Fecha: 18 de Junio</p>
+                <p class="text-sm text-gray-600"><a href="https://maps.app.goo.gl/gMVWTgSaDme86w2A8"
+                        class="direccion">Lugar: Auditorio de la Dirección Médica, Av. San Fernando 547, San Fernando,
+                        Tlalpan, 14070, Ciudad de México.</a></p>
+                <a href="assets/evento.ics" download
+                    class="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800 block text-center">
+                    Agregar a Calendario
+                </a>
+            </div>
+            <div class="bg-white rounded shadow p-4">
+                <img src="assets/derecho.jpg" alt="" class="mb-2">
+                <h3 class="font-semibold text-lg mb-2">Curso: Derecho a la salud</h3>
+                <p>Imparte: Dr. Sergio López Moreno, UAM-Xochimilco.</p>
+                <p class="text-sm text-gray-600">Modalidad: Virtual</p>
+                <p class="text-sm text-gray-600">Fecha: 03 julio 2025</p>
+                <a href="https://campus.paho.org/es/curso/liderazgo-en-enfermeria" target="_blank"
+                    class="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800 block text-center">
+                    Link al curso
+                </a>
+            </div>
+            <div class="bg-white rounded shadow p-4">
+                <img src="assets/gestion.avif" alt="" class="mb-2">
+                <h3 class="font-semibold text-lg mb-2">Webinario: Gestión del Riesgo de Emergencias en Salud y Desastres
+                </h3>
+                <p class="text-sm text-gray-600">Modalidad: Webinario</p>
+                <p class="text-sm text-gray-600">Fecha: 07 julio 2025</p>
+                <!-- <p class="text-sm text-gray-600">Imparte: Dr. David Benítez Valladares.  Secretario Técnico de la Comisión de Bioética de la Ciudad de México. SEDESA.</p> -->
+                <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_NDM3NTYyMjgtY2Y4Yy00YzNlLWIwZmYtNDU5YjcyMzBhY2Ex%40thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%2522e610e79c-2ec0-4e0f-8a14-1e4b101519f7%2522%252c%2522Oid%2522%253a%2522652619b3-04d3-4fd4-a3ae-f259d2bfc0c9%2522%257d%26anon%3Dtrue&type=meetup-join&deeplinkId=2c05c6be-5868-4a66-b0b8-80159afed551&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true"
+                    target="_blank"
+                    class="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800 block text-center">
+                    Link Webinar
+                </a>
+            </div>
+            <div class="bg-white rounded shadow p-4">
+                <img src="assets/biotecia.jpg" alt="" class="mb-2">
+                <h3 class="font-semibold text-lg mb-2">La dimensión social de la salud y la bioética: ¿determinantes sociales o salud colectiva?</h3>
+                <h4>Dra. Graciela Z. Rosso Sesión híbrida</h4>
+                <p class="text-sm text-gray-600">Fecha: 09 de julio</p>
+                <p class="text-sm text-gray-600"><a href="https://maps.app.goo.gl/gMVWTgSaDme86w2A8"
+                        class="direccion">Lugar: Auditorio de la Dirección Médica, Av. San Fernando 547, San Fernando,
+                        Tlalpan, 14070, Ciudad de México.</a></p>
+                <a href="assets/evento09-julio.ics" download
+                    class="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800 block text-center">
+                    Agregar a Calendario
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Noticias -->
+    <section id="noticias" class="py-10 px-4 max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-center">Noticias recientes</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+            <div class="bg-white rounded shadow overflow-hidden">
+                <img src="assets/noticia1.avif" alt="Noticia" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Arranca el Diplomado en Salud, Seguridad Social y Derechos Humanos
+                        con su Primera Clase Presencial</h3>
+                    <p class="text-sm text-gray-600 mt-2">Este martes 3 de junio se llevará a cabo la primera sesión del
+                        diplomado, titulada “El negocio de la enfermedad”, impartida por la Dra. Nidia Sosa Delgado en
+                        la Sala de Juntas de la Dirección General del ISSSTE.</p>
+                    <a href="diplomado.html"><button
+                            class="mt-4 bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800">Ver más</button></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 6. Footer -->
+    <footer class="bg-pink-800 text-white p-6 mt-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm">© 2025 ISSSTE - Todos los derechos reservados</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:underline text-sm">Aviso de privacidad</a>
+                <a href="#" class="hover:underline text-sm">Contacto</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.getElementById("slides");
+        const slideImages = slides.querySelectorAll("img");
+        const dots = document.querySelectorAll(".dot");
+        const nextButton = document.getElementById("next");
+        const prevButton = document.getElementById("prev");
+
+        let currentIndex = 0;
+        const totalSlides = slideImages.length;
+
+        function updateSlide(index) {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+            dot.classList.toggle("bg-pink-700", i === index);
+            dot.classList.toggle("bg-white", i !== index);
+            });
+        }
+        nextButton?.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlide(currentIndex);
+        });
+        prevButton?.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlide(currentIndex);
+        });
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateSlide(currentIndex);
+            });
+        });
+        // Slide automático cada 5 segundos
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlide(currentIndex);
+        }, 5000);
+
+        updateSlide(currentIndex); // Mostrar primer slide al cargar
+        });
+    </script>
+</body>
+</html>

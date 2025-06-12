@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Liderazgos ISSSTE//Calendario de Eventos//ES
+BEGIN:VEVENT
+UID:evento-20250618@liderazgos.issste
+SUMMARY:La destrucción de la prevención y la promoción de la salud
+DTSTART:20250618T100000Z
+DTEND:20250618T130000Z
+LOCATION:Lugar: Auditorio de la Dirección Médica, Av. San Fernando 547, San Fernando, Tlalpan, 14070, Ciudad de México.
+DESCRIPTION:Evento organizado por Liderazgos ISSSTE
+END:VEVENT
+END:VCALENDAR
