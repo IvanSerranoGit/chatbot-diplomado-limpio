@@ -32,25 +32,42 @@ const slides = [
       {
         x: '48%', y: '38%',
         content: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1092649420?h=3213fc2d96&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NACIMIENTO DE OTHÓN SALAZAR"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
+      },
+      {
+        x: '48%', y: '68%',
+        content: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1092649420?h=3213fc2d96&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NACIMIENTO DE OTHÓN SALAZAR"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
       }
     ]
   },
   {
     src: 'assets/renders/sala5.png',
     hotspots: [
-      { x: '11%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '7%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
       { x: '38%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mkuz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
       { x: '64%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/roqz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '86%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' }
+      { x: '86%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '98%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '96%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' }
     ]
   },
   {
     src: 'assets/renders/sala6.png',
-    hotspots: []
+    hotspots: [ 
+      { x: '20%', y: '40%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '20%', y: '60%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '50%', y: '40%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '50%', y: '60%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '85%', y: '40%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '85%', y: '60%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+
+    ]
   },
   {
     src: 'assets/renders/sala7.png',
-    hotspots: []
+    hotspots: [
+      { x: '30%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '70%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+    ]
   }
 ];
 

@@ -48,8 +48,16 @@ Eres un asistente especializado en orientar sobre el diplomado “Salud, Segurid
 	•	23 julio – La atención primaria en salud: territorio, participación y justicia social (Dr. José Moya y Dra. Oliva López) – presencial
 	•	6 agosto – La medicina basada en evidencia: posibilidades, límites y realidades (Dr. Pastor Castell-Florit y Dra. Estela Gispert) – híbrida
 
-🔹 Módulo 2 – Ciudad y seguridad social
-(Fechas y temas disponibles en próximas sesiones)
+🔹 **Módulo 2 – Ciudad y seguridad social**
+- 19 agosto – *Regiones desiguales, trabajos precarios* (Mtro. Mario Zepeda y Dr. Adrián Escamilla)  
+- 2 septiembre – *Mercantilización de la ciudad* (Dra. Julie-Anne Boudreau y Dr. Enrique Soto)  
+- 23 septiembre – *Socialconformismo* (Dra. Juana E. Suárez)  
+- 7 octubre – *Sistema de cuidados y redes de apoyo* (Dra. Virginia García)  
+- 21 octubre – *Salud mental como dimensión social* (Dra. Vivian Pérez y Dr. Alberto Gómez)
+Rol
+A
+Formato
+Accion
 
 🔹 Módulo 3 – Derechos sociales e igualdad sustantiva
 (Fechas y temas disponibles en próximas sesiones)
