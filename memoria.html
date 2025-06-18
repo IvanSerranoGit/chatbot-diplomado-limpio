@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./repo.css">
 </head>
+
 <body class="m-0 p-0 overflow-x-hidden">
   <!-- Hero con video de fondo -->
   <div class="relative w-full h-screen overflow-hidden">
@@ -27,7 +29,9 @@
     <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">Museo Digital Voces y Raíces</h1>
       <p class="text-lg md:text-xl mb-6 max-w-xl">Explora la historia a través de nuestras salas interactivas</p>
-      <a href="./MuseoDigital/recorrido-virtual/index.html" class="bg-pink-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-800 transition">Entrar al museo</a>
+      <a href="./MuseoDigital/recorrido-virtual/index.html"
+        class="bg-pink-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-800 transition">Entrar al
+        museo</a>
     </div>
   </div>
 
@@ -62,33 +66,46 @@
     <div class="max-w-screen-xl mx-auto text-center">
       <h2 class="text-4xl font-bold mb-6">COLECCIÓN</h2>
       <div class="flex justify-center mb-8 space-x-6 text-lg">
-        <button class="border border-pink-600 text-pink-600 px-6 py-2 font-medium">Archivo Histórico</button>
-        <button class="text-white opacity-70 hover:opacity-100">Memoria Fotográfica</button>
+        <button onclick="mostrarSet('archivo_historico')"
+          class="border border-pink-600 text-pink-600 px-6 py-2 font-medium">Archivo Histórico</button>
+        <button onclick="mostrarSet('memoria_fotografica')" class="text-white opacity-70 hover:opacity-100">Memoria
+          Fotográfica</button>
       </div>
       <div class="relative">
-        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">&#x276E;</button>
-        <div id="carrusel" class="overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide px-10"></div>
-        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">&#x276F;</button>
+        <button onclick="scrollCarrusel(-1)"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">
+          &#x276E;
+        </button>
+        <div class="overflow-hidden px-10">
+          <div id="carrusel" class="flex transition-transform duration-500 ease-in-out gap-6"></div>
+        </div>
+        <button onclick="scrollCarrusel(1)"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">
+          &#x276F;
+        </button>
       </div>
     </div>
   </section>
-
   <!-- Cómic Digital -->
   <section id="comic" class="bg-white py-20 px-6">
-    <div class="max-w-screen-xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-8 text-rose-800">CÓMIC DIGITAL</h2>
-      <!-- <div class="relative flex justify-center items-center">
-        <button class="absolute left-0 bg-rose-700 hover:bg-rose-800 text-white rounded-full p-4 z-10">&#x276E;</button>
-        <img id="pagina-comic" src="assets/comic1.jpg" alt="Página del cómic" class="w-full max-w-4xl rounded shadow" />
-        <button class="absolute right-0 bg-rose-700 hover:bg-rose-800 text-white rounded-full p-4 z-10">&#x276F;</button>
-      </div>
-      <div class="mt-6">
-        <a href="comics-anteriores.html" class="text-rose-700 font-semibold hover:underline">Ver comics anteriores</a>
-      </div> -->
- 
-      <div style="position:relative;padding-top:max(40%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/jvms/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+  <div class="max-w-screen-xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-8 text-rose-800">CÓMIC DIGITAL</h2>
+    
+    <!-- Imagen con acción -->
+    <div class="flex justify-center">
+      <img
+        src="assets/portada-comic.jpg"
+        alt="Cómic digital"
+        class="w-[400px] h-auto cursor-pointer rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+        onclick="abrirFlipbook('https://online.fliphtml5.com/ysimb/errk/')"
+      />
     </div>
-  </section>
+
+    <div class="mt-6">
+      <a href="comics-anteriores.html" class="text-rose-700 font-semibold hover:underline">Ver comics anteriores</a>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-pink-800 text-white p-6 mt-10">
@@ -101,17 +118,19 @@
     </div>
   </footer>
 
-   <!-- Modal Flipbook -->
-<div id="modal-flipbook" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
-  <div class="relative w-full max-w-4xl h-[90vh] bg-white rounded shadow-lg overflow-hidden">
-    <button onclick="cerrarFlipbook()" class="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-10">
-      ✕
-    </button>
-    <iframe id="iframe-flipbook" src="" class="w-full h-full border-none"></iframe>
+  <!-- Modal Flipbook -->
+  <div id="modal-flipbook" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center">
+    <div class="relative w-full max-w-4xl h-[90vh] bg-white rounded shadow-lg overflow-hidden">
+      <button onclick="cerrarFlipbook()"
+        class="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-10">
+        ✕
+      </button>
+      <iframe id="iframe-flipbook" src="" class="w-full h-full border-none"></iframe>
+    </div>
   </div>
-</div>
   <script src="./repo.js"></script>
   <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
 
 </body>
+
 </html>
