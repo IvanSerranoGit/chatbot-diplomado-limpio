@@ -15,7 +15,7 @@ function cerrarPopup() {
 let slideIndex = 0;
 const slides = [
   {
-    src: 'assets/renders/sala1.png',
+    src: 'assets/renders/sala1.jpg',
     hotspots: []
   },
   {
@@ -27,46 +27,46 @@ const slides = [
     hotspots: []
   },
   {
-    src: 'assets/renders/sala4.png',
+    src: 'assets/renders/sala4.jpg',
     hotspots: [
       {
-        x: '48%', y: '38%',
+        x: '50%', y: '18.5%',
         content: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1092649420?h=3213fc2d96&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NACIMIENTO DE OTHÓN SALAZAR"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
       },
       {
-        x: '48%', y: '68%',
-        content: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1092649420?h=3213fc2d96&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NACIMIENTO DE OTHÓN SALAZAR"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
+        x: '50%', y: '61.3%',
+        content: '<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1092651911?h=54ff2b9174&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="ENTREVISTAS SALA 1 MUSEO INCOMPLETO"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>'
       }
     ]
   },
   {
-    src: 'assets/renders/sala5.png',
+    src: 'assets/renders/sala5.jpg',
     hotspots: [
-      { x: '7%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '38%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mkuz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '64%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/roqz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '86%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '98%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '96%', y: '50%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' }
+      { x: '23.5%', y: '63%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/rxqr/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '34.5%', y: '63%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '51%', y: '63%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mkuz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '61%', y: '63%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/roqz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '71%', y: '63%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/mzej/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      
+      { x: '87.5%', y: '63%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/sjbz/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' }
     ]
   },
   {
-    src: 'assets/renders/sala6.png',
+    src: 'assets/renders/sala6.jpg',
     hotspots: [ 
-      { x: '20%', y: '40%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '20%', y: '60%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '50%', y: '40%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '50%', y: '60%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '85%', y: '40%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '85%', y: '60%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-
+      { x: '32%', y: '52%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/encl/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '32%', y: '71%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/bumk/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '56%', y: '52%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/bwca/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '56%', y: '71%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/kcxk/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '82%', y: '52%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/sgss/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '82%', y: '71%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/rgee/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
     ]
   },
   {
-    src: 'assets/renders/sala7.png',
+    src: 'assets/renders/sala7.jpg',
     hotspots: [
-      { x: '30%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
-      { x: '70%', y: '50%', content: '<div style="position:relative;padding-top:max(70%,424px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/zljm/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '29.5%', y: '70%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/sxss/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
+      { x: '83.5%', y: '64%', content: '<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/ysimb/errk/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>' },
     ]
   }
 ];
@@ -78,7 +78,7 @@ function actualizarSlide() {
   // Limpiar hotspots anteriores
   document.querySelectorAll('.hotspot-dinamico').forEach(el => el.remove());
 
-  
+
 
   // Agregar nuevos hotspots
   slides[slideIndex].hotspots.forEach(h => {
@@ -87,7 +87,7 @@ function actualizarSlide() {
     btn.style.left = h.x;
     btn.style.top = h.y;
     btn.title = 'Abrir contenido';
-    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" /></svg>';
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" /></svg>';
     btn.onclick = () => mostrarPopup(h.content);
     document.getElementById('museo').appendChild(btn);
   });
