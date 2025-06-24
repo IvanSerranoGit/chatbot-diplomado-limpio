@@ -16,16 +16,38 @@
       <source data-src="assets/Intro_museo.mp4" type="video/mp4" />
     </video>
     <div class="absolute w-full h-full bg-black/50 z-10"></div>
-    <header class="absolute top-0 left-0 w-full bg-black/70 z-20">
+
+    <header id="main-header"
+      class="bg-white shadow-md w-full fixed top-0 left-0 z-50 transition-transform duration-300">
       <div class="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
-        <img src="assets/logo.png" alt="Logo Museo" class="h-12" />
-        <nav class="space-x-6 text-white font-medium">
-          <a href="#acerca" class="hover:underline">Acerca</a>
-          <a href="#salas" class="hover:underline">Salas</a>
-          <a href="#contacto" class="hover:underline">Contacto</a>
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Logo Museo" class="h-12" />
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <!-- Menú de navegación -->
+        <nav id="main-menu" class="hidden md:flex space-x-6 font-medium text-gray-800">
+          <a href="#coleccion" class="hover:underline">Colección</a>
+          <a href="#comic" class="hover:underline">Cómics</a>
+          <a href="#entrevistas" class="hover:underline">Entrevistas</a>
         </nav>
       </div>
+
+      <!-- Menú desplegable en móvil -->
+      <div id="mobile-menu" class="md:hidden hidden flex flex-col items-center text-center bg-white px-6 pb-4">
+        <a href="#coleccion" class="hover:underline">Colección</a>
+        <a href="#comic" class="hover:underline">Cómics</a>
+        <a href="#entrevistas" class="hover:underline">Entrevistas</a>
+      </div>
     </header>
+
     <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h1 class="text-4xl md:text-6xl font-bold mb-4">Museo Digital Voces y Raíces</h1>
       <p class="text-lg md:text-xl mb-6 max-w-xl">Explora la historia a través de nuestras salas interactivas</p>
@@ -35,11 +57,60 @@
     </div>
   </div>
 
+  <!-- Colección -->
+  <section id="coleccion" class="bg-black text-white py-20 px-6">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">COLECCIÓN</h2>
+      <div class="flex justify-center mb-8 space-x-6 text-lg">
+        <button onclick="mostrarSet('archivo_historico')"
+          class="border border-pink-600 text-pink-600 hover:bg-pink-800 hover:border-pink-800 hover:text-white px-6 py-2 font-medium">Archivo
+          Histórico</button>
+        <button onclick="mostrarSet('memoria_fotografica')"
+          class="border text-white opacity-70 hover:opacity-100 px-6 py-2 border-white">Memoria
+          Fotográfica</button>
+      </div>
+      <div class="relative">
+        <button onclick="scrollCarrusel(-1)"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">
+          &#x276E;
+        </button>
+        <div class="overflow-x-auto md:overflow-hidden px-4 md:px-10">
+  <div id="carrusel" class="flex flex-nowrap gap-6 transition-transform duration-500 ease-in-out"></div>
+</div>
+        <button onclick="scrollCarrusel(1)"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">
+          &#x276F;
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómic Digital -->
+  <section id="comic" class="py-20 px-6">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-2 text-rose-800">CÓMIC DIGITAL</h2>
+        <div class="mx-auto w-24 h-1 bg-rose-800"></div>
+      </div>
+
+      <!-- Imagen con acción -->
+      <div class="flex justify-center">
+        <img src="assets/portada-comic.jpg" alt="Cómic digital"
+          class="w-[400px] h-auto cursor-pointer rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+          onclick="abrirFlipbook('https://online.fliphtml5.com/ysimb/errk/')" />
+      </div>
+
+      <div class="mt-6">
+        <a href="comics-anteriores.html" class="text-rose-700 font-semibold hover:underline">Ver comics anteriores</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Exposiciones Temporales -->
-  <section id="exposiciones" class="bg-white py-16 px-6">
+  <section id="entrevistas" class="bg-white py-16 px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold mb-2">Entrevistas</h2>
-      <div class="mx-auto w-24 h-1 bg-black"></div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-2 text-rose-800">ENTREVISTAS</h2>
+      <div class="mx-auto w-24 h-1 bg-rose-800"></div>
     </div>
     <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
       <div>
@@ -61,59 +132,13 @@
     </div>
   </section>
 
-  <!-- Colección -->
-  <section id="coleccion" class="bg-black text-white py-20 px-6">
-    <div class="max-w-screen-xl mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-6">COLECCIÓN</h2>
-      <div class="flex justify-center mb-8 space-x-6 text-lg">
-        <button onclick="mostrarSet('archivo_historico')"
-          class="border border-pink-600 text-pink-600 px-6 py-2 font-medium">Archivo Histórico</button>
-        <button onclick="mostrarSet('memoria_fotografica')" class="text-white opacity-70 hover:opacity-100">Memoria
-          Fotográfica</button>
-      </div>
-      <div class="relative">
-        <button onclick="scrollCarrusel(-1)"
-          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">
-          &#x276E;
-        </button>
-        <div class="overflow-hidden px-10">
-          <div id="carrusel" class="flex transition-transform duration-500 ease-in-out gap-6"></div>
-        </div>
-        <button onclick="scrollCarrusel(1)"
-          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-pink-600 hover:bg-pink-700 text-white rounded-full p-4 z-10">
-          &#x276F;
-        </button>
-      </div>
-    </div>
-  </section>
-  <!-- Cómic Digital -->
-  <section id="comic" class="bg-white py-20 px-6">
-  <div class="max-w-screen-xl mx-auto text-center">
-    <h2 class="text-4xl font-bold mb-8 text-rose-800">CÓMIC DIGITAL</h2>
-    
-    <!-- Imagen con acción -->
-    <div class="flex justify-center">
-      <img
-        src="assets/portada-comic.jpg"
-        alt="Cómic digital"
-        class="w-[400px] h-auto cursor-pointer rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-        onclick="abrirFlipbook('https://online.fliphtml5.com/ysimb/errk/')"
-      />
-    </div>
-
-    <div class="mt-6">
-      <a href="comics-anteriores.html" class="text-rose-700 font-semibold hover:underline">Ver comics anteriores</a>
-    </div>
-  </div>
-</section>
-
   <!-- Footer -->
   <footer class="bg-pink-800 text-white p-6 mt-10">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
       <p class="text-sm">© 2025 ISSSTE - Todos los derechos reservados</p>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:underline text-sm">Aviso de privacidad</a>
-        <a href="#" class="hover:underline text-sm">Contacto</a>
+        <a href="aviso.html" class="hover:underline text-sm">Aviso de privacidad</a>
+        <a href="legal.html" class="hover:underline text-sm">Aviso Legal</a>
       </div>
     </div>
   </footer>
@@ -123,7 +148,7 @@
     <div class="relative w-full max-w-4xl h-[90vh] bg-white rounded shadow-lg overflow-hidden">
       <button onclick="cerrarFlipbook()"
         class="absolute top-2 right-2 bg-red-600 hover:bg-red-700 text-white p-2 rounded-full z-10">
-        ✕
+
       </button>
       <iframe id="iframe-flipbook" src="" class="w-full h-full border-none"></iframe>
     </div>
@@ -132,5 +157,4 @@
   <script src="//static.fliphtml5.com/web/js/plugin/LightBox/js/fliphtml5-light-box-api-min.js"></script>
 
 </body>
-
 </html>

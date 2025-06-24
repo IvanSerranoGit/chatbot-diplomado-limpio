@@ -80,7 +80,7 @@ function mostrarSet(categoria) {
 
   carruselItems.forEach(item => {
     const contenedor = document.createElement('div');
-    contenedor.className = 'w-80 flex-shrink-0 text-center';
+    contenedor.className = 'w-72 sm:w-80 flex-shrink-0 text-center';
 
     const img = document.createElement('img');
     img.src = item.img;
@@ -100,6 +100,7 @@ function mostrarSet(categoria) {
 }
 
 function scrollCarrusel(direccion) {
+  if (window.innerWidth < 768) return; // en móviles no usamos índice
   const total = carruselItems.length;
   carruselIndex += direccion;
 
@@ -114,8 +115,14 @@ function scrollCarrusel(direccion) {
 
 function actualizarCarrusel() {
   const carrusel = document.getElementById('carrusel');
+
+  if (window.innerWidth < 768) {
+    carrusel.style.transform = 'translateX(0)';
+    return;
+  }
+
   const itemWidth = carrusel.children[0]?.offsetWidth || 0;
-  const gap = 24; // tailwind gap-6
+  const gap = 24;
   const offset = carruselIndex * (itemWidth + gap);
   carrusel.style.transform = `translateX(-${offset}px)`;
 }
@@ -150,3 +157,12 @@ document.addEventListener('DOMContentLoaded', () => {
   source.src = source.dataset.src;
   video.load();
 });
+
+// menu hamburguesa
+
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });

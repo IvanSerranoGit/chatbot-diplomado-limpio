@@ -106,3 +106,4 @@ function toggleBarra() {
 
 // Cargar primer slide al iniciar
 document.addEventListener('DOMContentLoaded', actualizarSlide);
+
